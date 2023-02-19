@@ -1,0 +1,16 @@
+name: Pipeline de prueba
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Ejemplo de trabajo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clona el repositorio
+        uses: actions/checkout@v2
+      - name: Muestra un mensaje
+        run: echo "¡Hola desde GitHub Actions!"
