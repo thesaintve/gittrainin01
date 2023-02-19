@@ -1,0 +1,16 @@
+name: ejemplo01 de un pipeline
+
+on:
+	push:
+		branches:
+			- main
+
+jobs:
+	build:
+		name: Ejemplo de Job
+		runs-on: ubuntus-latest
+		steps:
+			- name: Clona Repo
+			uses: actions/checkout@v2
+			- name: Muestra un mensaje
+			run: echo "Hola desde GitHub Actions!"
